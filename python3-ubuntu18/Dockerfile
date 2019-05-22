@@ -75,4 +75,4 @@ RUN set -ex; \
     rm -f get-pip.py
 
 RUN apt-get update
-WORKDIR ~/
+WORKDIR /
