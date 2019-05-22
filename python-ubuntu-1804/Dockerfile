@@ -1,7 +1,5 @@
 FROM buildpack-deps:bionic
 
-MAINTAINER Ming Li ming.george.li@gmail.com
-
 # ensure local python is preferred over distribution python
 ENV PATH /usr/local/bin:$PATH
 
@@ -13,7 +11,6 @@ ENV LANG C.UTF-8
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     tk-dev && rm -rf /var/lib/apt/lists/*
 
-ENV GPG_KEY 0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D
 ENV PYTHON_VERSION 3.6.8
 
 RUN set -ex \
@@ -80,3 +77,6 @@ RUN set -ex; \
             \( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) \
         \) -exec rm -rf '{}' +; \
     rm -f get-pip.py
+
+RUN apt-get update
+WORKDIR ~/
