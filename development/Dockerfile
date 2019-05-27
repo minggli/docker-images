@@ -12,3 +12,5 @@ RUN cd ~/bin && git clone https://github.com/minggli/dotfiles.git
 RUN touch ~/.bashrc && echo ". ~/bin/dotfiles/bashrc" >> ~/.bashrc
 RUN touch ~/.bash_profile && echo ". ~/.bashrc" >> ~/.bash_profile && \
     /bin/bash -c "source ~/.bash_profile"
+
+CMD ["./start.sh"]
