@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # enable sshd service
 sudo systemctl enable ssh
 sudo service ssh restart
