@@ -15,4 +15,4 @@ RUN touch ~/.bash_profile && echo ". ~/.bashrc" >> ~/.bash_profile && \
 
 ADD start.sh /start.sh
 
-CMD ["/start.sh"]
+ENTRYPOINT ["/start.sh"]
