@@ -5,7 +5,7 @@ RUN apt-get install -qqy tmux vim software-properties-common sudo
 
 RUN apt-add-repository -y ppa:cpick/hub && \
     apt-add-repository -y ppa:keithw/mosh
-RUN apt-get update && apt-get install -qqy tmate hub mosh iptables openssh-server pwgen rpl
+RUN apt-get update && apt-get install -qqy tmate hub mosh iptables openssh-server pwgen rpl supervisor
 
 RUN mkdir ~/bin
 RUN cd ~/bin && git clone https://github.com/minggli/dotfiles.git
