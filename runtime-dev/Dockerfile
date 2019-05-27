@@ -13,6 +13,8 @@ RUN touch ~/.bashrc && echo ". ~/bin/dotfiles/bashrc" >> ~/.bashrc
 RUN touch ~/.bash_profile && echo ". ~/.bashrc" >> ~/.bash_profile && \
     /bin/bash -c "source ~/.bash_profile"
 
+RUN sudo curl -o /usr/local/bin/rmate https://raw.githubusercontent.com/aurora/rmate/master/rmate && sudo chmod +x /usr/local/bin/rmate
+
 RUN echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config && echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 
 ADD start.sh /start.sh
