@@ -1,0 +1,3 @@
+[submodule "gpu-runtime-dev/cuda"]
+	path = gpu-runtime-dev/cuda
+	url = git@gitlab.com:nvidia/cuda.git
