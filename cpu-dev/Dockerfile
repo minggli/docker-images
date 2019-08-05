@@ -1,5 +1,7 @@
 FROM minggli/base-dev
 
+ENV LANG C.UTF-8
+
 RUN apt-get update
 RUN apt-get install -qqy tmux vim software-properties-common sudo
 
