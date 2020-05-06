@@ -7,6 +7,5 @@ docker run \
   --memory=2g \
   --memory-swap=2g \
   --restart=always \
-  -v $HOME/.ssh/:/root/.ssh/ \
   -v $HOME/repos/:/root/repos/ \
   -t $container_tag
