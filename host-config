@@ -1,0 +1,9 @@
+Host docker
+    HostName localhost
+    Port 2020
+    User root
+    StrictHostKeyChecking no
+    LocalForward 5000 localhost:5000
+    LocalForward 8888 localhost:8888
+    RemoteForward 52698 localhost:52698
+
