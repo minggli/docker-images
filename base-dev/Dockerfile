@@ -1,4 +1,4 @@
-FROM buildpack-deps:bionic
+FROM buildpack-deps:focal
 
 # ensure local python is preferred over distribution python
 ENV PATH /usr/local/bin:$PATH
@@ -11,7 +11,7 @@ ENV LANG C.UTF-8
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     tk-dev && rm -rf /var/lib/apt/lists/*
 
-ENV PYTHON_VERSION 3.6.8
+ENV PYTHON_VERSION 3.9.12
 
 RUN set -ex \
     \
@@ -53,7 +53,7 @@ RUN cd /usr/local/bin \
     && ln -s python3-config python-config
 
 # if this is called "PIP_VERSION", pip explodes with "ValueError: invalid truth value '<VERSION>'"
-ENV PYTHON_PIP_VERSION 19.1.1
+ENV PYTHON_PIP_VERSION 22.0.4
 
 RUN set -ex; \
     \
