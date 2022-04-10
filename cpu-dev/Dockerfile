@@ -11,7 +11,5 @@ RUN sudo curl -o /usr/local/bin/rmate https://raw.githubusercontent.com/aurora/r
 RUN echo "PermitEmptyPasswords yes" >> /etc/ssh/sshd_config \
   && echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 
-RUN echo "eval \$(ssh-agent -s) > /dev/null " >> ~/.profile
-
 ADD start.sh /start.sh
 CMD /start.sh
