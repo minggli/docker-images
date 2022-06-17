@@ -3,6 +3,7 @@ FROM buildpack-deps:focal
 # add zsh
 RUN apt-get update && apt-get install -qqy zsh
 # switch to zsh
+RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 SHELL ["/bin/zsh", "-c"]
 
 # ensure local python is preferred over distribution python

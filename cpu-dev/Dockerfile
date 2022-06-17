@@ -4,7 +4,6 @@ ENV LANG C.UTF-8
 
 RUN apt-get update
 RUN apt-get install -qqy tmux vim software-properties-common sudo tmate hub mosh iptables openssh-server pwgen supervisor
-RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 RUN sudo curl -o /usr/local/bin/rmate https://raw.githubusercontent.com/aurora/rmate/master/rmate && sudo chmod +x /usr/local/bin/rmate
 RUN echo "PermitEmptyPasswords yes" >> /etc/ssh/sshd_config \
